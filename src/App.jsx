@@ -6,6 +6,16 @@ import HomeIcon from '@mui/icons-material/Home'
 import Typography from '@mui/material/Typography'
 import { useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
+import {useColorScheme} from '@mui/material/styles'
+
+function ModeToggle() {
+  const { mode, setMode } = useColorScheme()
+  return (
+    <Button onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}>
+      {mode === 'light' ? 'Dark Mode' : 'Light Mode'}
+    </Button>
+  )
+}
 
 function App() {
   const theme = useTheme()
@@ -14,6 +24,7 @@ function App() {
   return (
     <Box sx={{ bgcolor: 'background.default', color: 'text.primary', minHeight: '100vh', padding: 2 }}>
       <Typography variant="h1" gutterBottom>Hiep Dev</Typography>
+      <ModeToggle />
       <Typography variant="h2" color="text.secondary" gutterBottom>
         Hiep Dev (Secondary Color)
       </Typography>
