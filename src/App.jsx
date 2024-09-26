@@ -7,9 +7,65 @@ import Typography from '@mui/material/Typography'
 import { useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import {useColorScheme} from '@mui/material/styles'
+import { useMediaQuery } from '@mui/material'
+import InputLabel from '@mui/material/InputLabel'
+import MenuItem from '@mui/material/MenuItem'
+import FormControl from '@mui/material/FormControl'
+import Select from '@mui/material/Select'
+import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined'
+import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined'
+import Brightness4Icon from '@mui/icons-material/Brightness4'
+
+function ModeSelect() {
+  const { mode, setMode } = useColorScheme()
+  const handleChange = (event) => {
+    setMode(event.target.value);
+  };
+
+  return (
+    
+    <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+      <InputLabel id="mode-select-label">Mode</InputLabel>
+      <Select
+        labelId="mode-select-label"
+        id="mode-select"
+        value={mode}
+        label="Mode"
+        onChange={handleChange}
+      >
+        <MenuItem value="">
+          <em>None</em>
+        </MenuItem>
+        <MenuItem value={'light'}>
+        <Box sx={{display: 'flex', alignItems: 'center' , gap: '8px'}}>
+          <LightModeOutlinedIcon fontSize='small' />
+          Light
+        </Box>
+        </MenuItem>
+        <MenuItem value={'dark'}>
+        <Box sx={{display: 'flex', alignItems: 'center' , gap: 1 }}>
+          <DarkModeOutlinedIcon fontSize='small' />
+          Dark
+        </Box>
+        </MenuItem>
+        <MenuItem value={'system'}>
+        <Box sx={{display: 'flex', alignItems: 'center' , gap: 2}}>
+          <Brightness4Icon fontSize='small' />
+          System
+        </Box>
+        </MenuItem>
+      </Select>
+    </FormControl>
+  );
+}
 
 function ModeToggle() {
   const { mode, setMode } = useColorScheme()
+
+  // const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
+  // const prefersLightMode = useMediaQuery('(prefers-color-scheme: light)')
+  // console.log('prefersDarkMode', prefersDarkMode)
+  // console.log('prefersLightMode', prefersLightMode)
   return (
     <Button onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}>
       {mode === 'light' ? 'Dark Mode' : 'Light Mode'}
@@ -23,6 +79,8 @@ function App() {
 
   return (
     <Box sx={{ bgcolor: 'background.default', color: 'text.primary', minHeight: '100vh', padding: 2 }}>
+      <ModeSelect />
+      <hr />
       <Typography variant="h1" gutterBottom>Hiep Dev</Typography>
       <ModeToggle />
       <Typography variant="h2" color="text.secondary" gutterBottom>
@@ -41,10 +99,11 @@ function App() {
         </Button>
       </Box>
       <Box sx={{ '& > svg': { m: 1 } }}>
-        <AccessAlarmIcon />
-        <ThreeDRotation />
-        <HomeIcon />
+        <AccessAlarmIcon color="primary" />
+        <ThreeDRotation color="secondary" />
+        <HomeIcon color="error" />
       </Box>
+    
       <Box sx={{ '& > svg': { m: 1 } }}>
         <HomeIcon color="primary" />
         <HomeIcon color="secondary" />
@@ -57,4 +116,4 @@ function App() {
   )
 }
 
-export default App
+export default App  
