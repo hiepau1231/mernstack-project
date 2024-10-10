@@ -29,52 +29,51 @@ function AppBar() {
         gap: 2,
         paddingX: 2,
         overflowX: 'auto',
-      })}
-    >
-      <Box px={2} display="flex" alignItems="center" gap={2}>
+      })}>
+      <Box px={2} display='flex' alignItems='center' gap={2}>
         <AppsIcon
           sx={{
             fontSize: 24,
             color: 'primary.main',
           }}
         />
-        <Box display="flex" alignItems="center" gap={0.5}>
+        <Box display='flex' alignItems='center' gap={0.5}>
           <SvgIcon
             component={TrelloIcon}
             sx={{
               color: 'primary.main',
               fontSize: 20,
-              
             }}
           />
           <Typography
-            variant="span"
+            variant='span'
             sx={{
               fontWeight: 'bold',
               color: 'primary.main',
               fontSize: '1.2rem',
-            }}
-          >
+            }}>
             Trello
           </Typography>
         </Box>
-        <Workspace />
-        <Recent />
-        <Templates />
-        <Starred />
+        <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1 }}>
+          <Workspace />
+          <Recent />
+          <Templates />
+          <Starred />
+        </Box>
 
-        <Button variant="outlined">Create</Button>
+        <Button variant='outlined'>Create</Button>
       </Box>
-      <Box display="flex" alignItems="center" gap={2}>
-        <TextField id="outlined-search" label="Search..." type="search" size="small" />
+      <Box display='flex' alignItems='center' gap={2}>
+        <TextField id='outlined-search' label='Search...' type='search' size='small' sx={{ minWidth: 200 }}/>
         <ModeSelect />
-        <Tooltip title="Notifications">
-          <Badge color="secondary" variant="dot" sx={{ cursor: 'pointer' }}>
+        <Tooltip title='Notifications'>
+          <Badge color='secondary' variant='dot' sx={{ cursor: 'pointer' }}>
             <NotificationsNoneIcon sx={{ color: 'primary.main' }} />
           </Badge>
         </Tooltip>
 
-        <Tooltip title="Help" sx={{ cursor: 'pointer' }}>
+        <Tooltip title='Help' sx={{ cursor: 'pointer' }}>
           <HelpOutlineIcon sx={{ color: 'primary.main' }} />
         </Tooltip>
 

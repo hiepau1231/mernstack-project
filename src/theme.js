@@ -37,6 +37,23 @@ export const theme = extendTheme({
     },
   },
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          '*::-webkit-scrollbar': {
+            width: '8px',
+            height: '8px',
+          },
+          '*::-webkit-scrollbar-hover': {
+            backgroundColor: 'red',
+          },
+          '*::-webkit-scrollbar-thumb': {
+            backgroundColor: 'red',
+            borderRadius: 10,
+          },
+        },
+      },
+    },
     MuiButton: {
       styleOverrides: {
         root: ({theme}) => ({
