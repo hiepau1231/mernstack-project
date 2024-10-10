@@ -25,17 +25,17 @@ function Recent() {
   return (
     <Box>
       <Button
-        id="basic-button-recent"
+        id='basic-button-recent'
         aria-controls={open ? 'basic-menu-recent' : undefined}
-        aria-haspopup="true"
+        aria-haspopup='true'
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
         Recent <ExpandMoreIcon />
       </Button>
       <Menu
-        id="basic-menu-recent"
-        aria-labelledby="basic-button-recent"
+        id='basic-menu-recent'
+        aria-labelledby='basic-button-recent'
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
@@ -48,7 +48,7 @@ function Recent() {
           horizontal: 'left',
         }}
       >
-         <MenuItem>
+        <MenuItem>
           <ListItemText inset>Single</ListItemText>
         </MenuItem>
         <MenuItem>

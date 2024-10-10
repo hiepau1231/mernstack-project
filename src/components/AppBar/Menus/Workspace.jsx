@@ -28,17 +28,17 @@ function Workspace() {
   return (
     <Box>
       <Button
-        id="basic-button-workspace"
+        id='basic-button-workspace'
         aria-controls={open ? 'basic-menu-workspace' : undefined}
-        aria-haspopup="true"
+        aria-haspopup='true'
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
         Workspaces <ExpandMoreIcon />
       </Button>
       <Menu
-        id="basic-menu-workspace"
-        aria-labelledby="basic-button-workspace"
+        id='basic-menu-workspace'
+        aria-labelledby='basic-button-workspace'
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
@@ -53,35 +53,35 @@ function Workspace() {
       >
         <MenuItem>
           <ListItemIcon>
-            <ContentCut fontSize="small" />
+            <ContentCut fontSize='small' />
           </ListItemIcon>
           <ListItemText>Cut</ListItemText>
-          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+          <Typography variant='body2' sx={{ color: 'text.secondary' }}>
             Create Workspace
           </Typography>
         </MenuItem>
         <MenuItem>
           <ListItemIcon>
-            <ContentCopy fontSize="small" />
+            <ContentCopy fontSize='small' />
           </ListItemIcon>
           <ListItemText>Copy</ListItemText>
-          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+          <Typography variant='body2' sx={{ color: 'text.secondary' }}>
             Join Workspace
           </Typography>
         </MenuItem>
         <MenuItem>
           <ListItemIcon>
-            <ContentPaste fontSize="small" />
+            <ContentPaste fontSize='small' />
           </ListItemIcon>
           <ListItemText>Paste</ListItemText>
-          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+          <Typography variant='body2' sx={{ color: 'text.secondary' }}>
             Manage Workspace
           </Typography>
         </MenuItem>
         <Divider />
         <MenuItem>
           <ListItemIcon>
-            <Cloud fontSize="small" />
+            <Cloud fontSize='small' />
           </ListItemIcon>
           <ListItemText>Workspace Settings</ListItemText>
         </MenuItem>

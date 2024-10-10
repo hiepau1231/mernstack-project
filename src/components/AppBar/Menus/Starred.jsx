@@ -25,17 +25,17 @@ function Starred() {
   return (
     <Box>
       <Button
-        id="basic-button-starred"
+        id='basic-button-starred'
         aria-controls={open ? 'basic-menu-starred' : undefined}
-        aria-haspopup="true"
+        aria-haspopup='true'
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
         Starred <ExpandMoreIcon />
       </Button>
       <Menu
-        id="basic-menu-starred"
-        aria-labelledby="basic-button-starred"
+        id='basic-menu-starred'
+        aria-labelledby='basic-button-starred'
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
@@ -48,7 +48,7 @@ function Starred() {
           horizontal: 'left',
         }}
       >
-         <MenuItem>
+        <MenuItem>
           <ListItemText inset>Single</ListItemText>
         </MenuItem>
         <MenuItem>
