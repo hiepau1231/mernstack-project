@@ -36,4 +36,38 @@ export const theme = extendTheme({
       },
     },
   },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: ({theme}) => ({
+          textTransform : 'none',
+        }),
+      },
+    },
+    MuiInputLabel: {
+      styleOverrides: {
+        root: ({theme}) => ({
+          fontSize: 14,
+          color: theme.palette.primary.main,
+        }),
+      },
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: ({theme}) => ({
+          color:theme.palette.primary.main,
+          fontSize: 14,
+          '.MuiOutlinedInput-notchedOutline': {
+            borderColor: theme.palette.primary.light,
+          },
+          '&:hover': {
+            ' .MuiOutlinedInput-notchedOutline': {
+              borderColor: theme.palette.primary.main,
+            },
+          },
+        }),
+      },
+    },
+  },
 })
+
