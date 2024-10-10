@@ -1,5 +1,5 @@
-import { experimental_extendTheme as extendTheme } from '@mui/material/styles'
-import { red, teal, cyan, orange ,deepOrange } from '@mui/material/colors'
+import { experimental_extendTheme as extendTheme } from '@mui/material/styles';
+import { red, teal, cyan, orange, deepOrange } from '@mui/material/colors';
 
 export const theme = extendTheme({
   trello: {
@@ -56,14 +56,14 @@ export const theme = extendTheme({
     },
     MuiButton: {
       styleOverrides: {
-        root: ({theme}) => ({
-          textTransform : 'none',
+        root: ({ theme }) => ({
+          textTransform: 'none',
         }),
       },
     },
     MuiInputLabel: {
       styleOverrides: {
-        root: ({theme}) => ({
+        root: ({ theme }) => ({
           fontSize: 14,
           color: theme.palette.primary.main,
         }),
@@ -71,8 +71,8 @@ export const theme = extendTheme({
     },
     MuiOutlinedInput: {
       styleOverrides: {
-        root: ({theme}) => ({
-          color:theme.palette.primary.main,
+        root: ({ theme }) => ({
+          color: theme.palette.primary.main,
           fontSize: 14,
           '.MuiOutlinedInput-notchedOutline': {
             borderColor: theme.palette.primary.light,
@@ -86,5 +86,4 @@ export const theme = extendTheme({
       },
     },
   },
-})
-
+});

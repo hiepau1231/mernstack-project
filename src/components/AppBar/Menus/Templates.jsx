@@ -25,17 +25,17 @@ function Templates() {
   return (
     <Box>
       <Button
-        id="basic-button-templates"
+        id='basic-button-templates'
         aria-controls={open ? 'basic-menu-templates' : undefined}
-        aria-haspopup="true"
+        aria-haspopup='true'
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
         Templates <ExpandMoreIcon />
       </Button>
       <Menu
-        id="basic-menu-templates"
-        aria-labelledby="basic-button-templates"
+        id='basic-menu-templates'
+        aria-labelledby='basic-button-templates'
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
@@ -48,7 +48,7 @@ function Templates() {
           horizontal: 'left',
         }}
       >
-         <MenuItem>
+        <MenuItem>
           <ListItemText inset>Single</ListItemText>
         </MenuItem>
         <MenuItem>

@@ -6,15 +6,11 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
-    'plugin:react-hooks/recommended'
+    'plugin:react-hooks/recommended',
   ],
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
   settings: { react: { version: '18.2' } },
-  plugins: [
-    'react',
-    'react-hooks',
-    'react-refresh'
-  ],
+  plugins: ['react', 'react-hooks', 'react-refresh'],
   rules: {
     'react-refresh/only-export-components': 'warn',
     'react-hooks/rules-of-hooks': 'error',
@@ -27,8 +23,7 @@ module.exports = {
       {
         patterns: [
           {
-            pattern : ['@mui /*/*/*']
-            
+            pattern: ['@mui /*/*/*'],
           },
         ],
       },
@@ -42,15 +37,16 @@ module.exports = {
     'no-multiple-empty-lines': 1,
     'space-before-blocks': ['error', 'always'],
     'object-curly-spacing': [1, 'always'],
-    'indent': ['warn', 2],
-    'semi': [1, 'never'],
-    'quotes': ['error', 'single'],
+    indent: ['warn', 2],
+    semi: [1, 'never'],
+    quotes: ['error', 'single'],
     'array-bracket-spacing': 1,
     'linebreak-style': 0,
     'no-unexpected-multiline': 'warn',
     'keyword-spacing': 1,
     'comma-dangle': 1,
     'comma-spacing': 1,
-    'arrow-spacing': 1
-  }
-}
+    'arrow-spacing': 1,
+    'react/jsx-newline': [1, { prevent: false, allowMultilines: false }],
+  },
+};
