@@ -43,7 +43,8 @@ function AppBar() {
             component={TrelloIcon}
             sx={{
               color: 'primary.main',
-              fontSize: 24,
+              fontSize: 20,
+              
             }}
           />
           <Typography
@@ -69,12 +70,12 @@ function AppBar() {
         <ModeSelect />
         <Tooltip title="Notifications">
           <Badge color="secondary" variant="dot" sx={{ cursor: 'pointer' }}>
-            <NotificationsNoneIcon />
+            <NotificationsNoneIcon sx={{ color: 'primary.main' }} />
           </Badge>
         </Tooltip>
 
         <Tooltip title="Help" sx={{ cursor: 'pointer' }}>
-          <HelpOutlineIcon />
+          <HelpOutlineIcon sx={{ color: 'primary.main' }} />
         </Tooltip>
 
         <Profile />
